@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jigme Tenzin — Digital Technology & Innovation ePortfolio">
+  <title>Jigme Tenzin | ePortfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div id="progress" class="scroll-progress"></div>
+    <nav class="navbar">
+      <a href="#home" class="brand">
+        <img id="brandImg" class="brand-img" src="assets/profile.jpg" alt="Jigme Tenzin">
+        <div class="brand-text">
+          <h1>Jigme Tenzin</h1>
+          <p>ePortfolio</p>
+        </div>
+      </a>
+      <button id="menuBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <div id="nav" class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="admin-link" href="admin.html">Admin</a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="pageMarquee" class="page-marquee" aria-label="Page highlight">
+    <div class="marquee-track"><span id="marqueeText">Welcome to my digital ePortfolio · Learn · Build · Improve ·</span><span aria-hidden="true">Welcome to my digital ePortfolio · Learn · Build · Improve ·</span></div>
+  </div>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <span class="badge">DIGITAL TECHNOLOGY &amp; INNOVATION</span>
+          <h2>Hello, I'm <strong id="profileName">Jigme Tenzin</strong></h2>
+          <div class="typing">I <span id="typed">build digital experiences.</span><i class="caret"></i></div>
+          <p id="profileIntro">A teacher trainee exploring technology, programming, web development and creative digital solutions.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#projects">Explore My Work</a>
+            <a id="cvLink" class="btn btn-outline" href="assets/Jigme-Tenzin-CV.pdf" download>Download CV</a>
+          </div>
+          <div id="socials" class="socials"></div>
+          <div class="hero-stats">
+            <div><b id="skillCount" data-count="0">0</b><span>Skills</span></div>
+            <div><b id="projectCount" data-count="0">0</b><span>Projects</span></div>
+            <div><b id="eduCount" data-count="0">0</b><span>Education</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="photo-frame">
+            <img id="profileImage" src="assets/profile.jpg" alt="Jigme Tenzin">
+            <span class="chip c1">💻 Web</span>
+            <span class="chip c2">🐍 Python</span>
+            <span class="chip c3">🇧🇹 Bhutan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-title reveal"><small>01 · About Me</small><h3>Turning curiosity into useful things</h3></div>
+        <div id="aboutContent" class="about-content">
+          <article class="card about-story reveal">
+            <div class="about-story-head"><div class="initials">JT</div><div><span class="media-kicker">My story</span><h4>A journey of learning, teaching and creating</h4></div></div>
+            <div id="aboutText" class="about-text">Loading...</div>
+          </article>
+          <div class="facts reveal">
+            <div class="card"><b>📍</b><span><small>Based in</small><strong>Bhutan</strong></span></div>
+            <div class="card"><b>🎓</b><span><small>Current study</small><strong>B.Ed. IT / DTI</strong></span></div>
+            <div class="card"><b>🎯</b><span><small>Focus</small><strong>Technology &amp; Education</strong></span></div>
+            <div class="card"><b>🚀</b><span><small>Mindset</small><strong>Learn · Build · Improve</strong></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <div class="section-title reveal"><small>02 · What I Do</small><h3>Skills that keep growing</h3><p>Practical abilities developed through study, teaching and projects, with visual evidence of what I have learned.</p></div>
+        <div id="skillsGrid" class="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-title reveal"><small>03 · My Journey</small><h3>Education &amp; growth</h3><p>Milestones, learning experiences, certificates and visual memories from my academic journey.</p></div>
+        <div id="educationGrid" class="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <div class="section-title reveal"><small>04 · Selected Work</small><h3>Projects I have built</h3><p>Real digital systems, screenshots, demos and technologies from my learning and development journey.</p></div>
+        <div id="projectsGrid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-title reveal"><small>05 · Let's Connect</small><h3>Have an idea? Let's talk</h3><p>Send a message through the form below.</p></div>
+        <div class="contact-grid">
+          <form id="contactForm" class="card contact-form reveal">
+            <h4>Send a message</h4>
+            <input id="cname" class="form-control" required maxlength="120" placeholder="Your name" autocomplete="name">
+            <input id="cemail" class="form-control" type="email" required maxlength="160" placeholder="Your email" autocomplete="email">
+            <textarea id="cmessage" class="form-control" required maxlength="2000" rows="6" placeholder="Your message"></textarea>
+            <button id="sendBtn" class="btn btn-solid" type="submit">Send Message</button>
+            <p id="formStatus"></p>
+          </form>
+          <div class="card contact-card reveal">
+            <div class="contact-symbol">✦</div>
+            <h4>Let's build something useful.</h4>
+            <p>Websites, educational technology ideas and practical digital solutions are all part of what I enjoy exploring.</p>
+            <div id="contactSocials"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-wave"></div>
+    <div class="footer-inner">
+      <div class="footer-quote">
+        <div class="footer-quote-mark">“</div>
+        <p>“A portfolio is not just a record of where you have been; it is a window into where you are going.”</p>
+        <small>Keep learning. Keep creating. Keep growing.</small>
+      </div>
+      <div class="footer-contact">
+        <h5>Contact</h5>
+        <div class="footer-contact-list">
+          <a id="footerEmail" href="mailto:">✉ <span id="footerEmailText">Email</span></a>
+          <a id="footerPhone" href="tel:" style="display:none">☎ <span id="footerPhoneText"></span></a>
+          <a href="#contact">✦ Send a message</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> <span id="footerNameBottom">Jigme Tenzin</span>. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <button id="topBtn" class="top-btn" aria-label="Back to top">&uarr;</button>
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

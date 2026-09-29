@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin | Jigme Tenzin ePortfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- ================= LOGIN ================= -->
+  <div id="login" class="login-wrapper">
+    <div class="login-card">
+      <img class="login-mark" src="assets/profile.jpg" alt="Jigme Tenzin">
+      <h2>Admin Login</h2>
+      <p class="subtitle">Sign in to manage your ePortfolio</p>
+      <div id="loginMsg" class="alert alert-error"></div>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input id="email" type="email" class="form-control" placeholder="Enter email" autocomplete="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" class="form-control" placeholder="Enter password" autocomplete="current-password" required>
+        </div>
+        <button id="loginBtn" type="submit" class="btn btn-primary btn-block">Log In</button>
+      </form>
+      <p class="back-link"><a href="index.html">&larr; Back to portfolio</a></p>
+    </div>
+  </div>
+
+  <!-- ================= APP ================= -->
+  <div id="app" class="admin-layout hidden">
+    <aside id="sidebar" class="admin-sidebar">
+      <div class="sidebar-brand">
+        <img class="brand-img" src="assets/profile.jpg" alt="Jigme Tenzin">
+        <span>Portfolio Admin</span>
+      </div>
+      <nav class="admin-nav">
+        <button data-view="dashboard" class="active">&#8962; Dashboard</button>
+        <p class="nav-label">Content</p>
+        <button data-view="profile">&#9673; Profile</button>
+        <button data-view="about">&#9676; About</button>
+        <button data-view="skills">&#10022; Skills</button>
+        <button data-view="education">&#9635; Education</button>
+        <button data-view="projects">&#9670; Projects</button>
+        <button data-view="socials">&#8599; Social Links</button>
+        <p class="nav-label">Communication</p>
+        <button data-view="messages">&#9993; Messages</button>
+      </nav>
+      <div class="sidebar-footer">
+        <div id="adminEmail" class="admin-name"></div>
+        <a class="btn btn-secondary btn-block" href="index.html">View Website</a>
+        <button id="logout" class="btn btn-outline btn-block">Logout</button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <button id="mobileMenu" class="mobile-menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        <h2 id="viewTitle">Dashboard</h2>
+      </div>
+
+      <!-- Dashboard -->
+      <section id="dashboard" class="view">
+        <div class="welcome">
+          <div>
+            <h3>Keep your portfolio fresh</h3>
+            <p>Manage only what you need. Your public website stays clean while this area keeps the editing tools organized.</p>
+          </div>
+          <a class="btn btn-primary" href="index.html">Preview Website</a>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card"><div class="stat-label">Skills</div><div class="stat-value" id="dSkills">-</div></div>
+          <div class="stat-card"><div class="stat-label">Education</div><div class="stat-value" id="dEdu">-</div></div>
+          <div class="stat-card"><div class="stat-label">Projects</div><div class="stat-value" id="dProjects">-</div></div>
+          <div class="stat-card stat-gold"><div class="stat-label">Messages</div><div class="stat-value" id="dMessages">-</div></div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="panel">
+            <h3>Quick actions</h3>
+            <div class="quick">
+              <button data-view="profile">Update Profile <span>&rarr;</span></button>
+              <button data-view="projects">Manage Projects <span>&rarr;</span></button>
+              <button data-view="skills">Manage Skills <span>&rarr;</span></button>
+              <button data-view="messages">Check Messages <span>&rarr;</span></button>
+            </div>
+          </div>
+          <div class="panel tips">
+            <h3>Tip: keep content short</h3>
+            <p>Use concise descriptions on the public site so visitors can understand your work quickly without facing a wall of text.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Editor views render here -->
+      <section id="editor" class="view hidden"><div id="editorContent"></div></section>
+    </main>
+  </div>
+
+  <!-- ================= MODAL ================= -->
+  <div id="modal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <div class="modal-header"><h3 id="modalTitle">Edit</h3><button id="closeModal" class="modal-close" aria-label="Close">&times;</button></div>
+      <div id="modalContent" class="modal-body"></div>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
